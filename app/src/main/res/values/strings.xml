@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Book Inventory</string>
+    <string name="insert_book">Insert Book Data</string>
+</resources>

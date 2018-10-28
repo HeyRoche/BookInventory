@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".EditorActivity">
+
+    <!--Book category -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/editor_textViews"
+            android:text="@string/book_overview" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Input fields -->
+            <EditText
+                android:id="@+id/edit_book_title"
+                style="@style/editTextViews_editor_styles"
+                android:hint="@string/book_title" />
+
+            <EditText
+                android:id="@+id/edit_book_supplier"
+                style="@style/editTextViews_editor_styles"
+                android:hint="@string/editor_supplier" />
+
+            <EditText
+                android:id="@+id/edit_book_price"
+                style="@style/editTextViews_editor_styles"
+                android:hint="@string/price_edit"
+                android:inputType="number" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/editor_textViews"
+            android:text="@string/edit_quantity" />
+
+        <Button
+            android:id="@+id/minus_quantity_btn"
+            style="@style/small_btn"
+            android:layout_marginLeft="56dp"
+            android:text="@string/minus" />
+
+        <EditText
+            android:id="@+id/edit_quantity_text"
+            style="@style/zero_edit_text"
+            android:hint="@string/zero" />
+
+        <Button
+            android:id="@+id/plus_quantity_btn"
+            style="@style/small_btn"
+            android:text="@string/plus" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/editor_textViews"
+            android:text="@string/phone_number" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/edit_book_phone"
+                style="@style/editTextViews_editor_styles"
+                android:hint="@string/number_hint"
+                android:inputType="phone" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/editor_textViews"
+            android:text="@string/email_addy" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/edit_book_email"
+                style="@style/editTextViews_editor_styles"
+                android:hint="@string/email_hint"
+                android:inputType="textEmailAddress" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/phoneOrderBtn"
+            style="@style/image_button_style"
+            android:src="@drawable/baseline_call_white_18dp" />
+
+        <ImageButton
+            android:id="@+id/emailBtn"
+            style="@style/image_button_style"
+            android:src="@drawable/baseline_mail_white_18dp" />
+    </LinearLayout>
+
+</LinearLayout>

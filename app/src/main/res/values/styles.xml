@@ -1,11 +1,103 @@
-<resources>
-
+<resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+        <item name="colorAccent">@color/secondaryDarkColor</item>
+    </style>
+    <!--TextView styles for activity_catalog -->
+    <style name="catalog_textViews">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">sans-serif</item>
     </style>
 
+    <!--FAB styles for activity_catalog -->
+    <style name="fab_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_marginRight">55dp</item>
+        <item name="android:layout_marginBottom">49dp</item>
+    </style>
+    <!--Title style on list view -->
+    <style name="title_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <!--Price textView style on list view -->
+    <style name="price_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@id/book_title</item>
+        <item name="android:layout_marginTop">64dp</item>
+        <item name="android:textSize">20sp</item>
+
+    </style>
+    <!--price and quantity textView style on list view -->
+    <style name="numerical_list">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">64dp</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="quantity_textView_list">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">56dp</item>
+        <item name="android:layout_marginTop">64dp</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <!--purchase button style on listView  -->
+    <style name="purchase_btn_style">
+        <item name="android:layout_width">108dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_marginTop">140dp</item>
+        <item name="android:background">@color/secondaryDarkColor</item>
+        <item name="android:focusable">false</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+    <!--TextView styles for activity_editor  -->
+    <style name="editor_textViews">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">16dp</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <!--EditText styles for activity_editor -->
+    <style name="editTextViews_editor_styles">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">16dp</item>
+    </style>
+    <!--Button Image styles for activity_editor -->
+    <style name="image_button_style">
+        <item name="android:layout_width">64dp</item>
+        <item name="android:layout_height">64dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:background">@color/secondaryDarkColor</item>
+    </style>
+    <!--Plus/minus styles for activity_editor -->
+    <style name="small_btn">
+        <item name="android:layout_width">36dp</item>
+        <item name="android:layout_height">36dp</item>
+    </style>
+    <!--Zero editText style for activity_editor -->
+    <style name="zero_edit_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">24sp</item>
+    </style>
 </resources>

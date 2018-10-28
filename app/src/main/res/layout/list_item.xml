@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/myCoordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentBottom="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/book_title"
+            style="@style/title_style"
+            tools:text="Happy Potter and the Sorcerer's Stone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/price_text"
+                style="@style/price_style"
+                android:text="@string/price_edit" />
+
+            <TextView
+                android:id="@+id/book_price"
+                style="@style/numerical_list"
+                tools:text="20" />
+
+            <TextView
+                android:id="@+id/quantity_text"
+                style="@style/quantity_textView_list"
+                android:text="@string/list_quantity" />
+
+            <TextView
+                android:id="@+id/book_quantity"
+                style="@style/numerical_list"
+                tools:text="25" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/purchase_book_btn"
+            style="@style/purchase_btn_style"
+            android:text="@string/purchase" />
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -8,8 +8,6 @@ import com.example.lroch.bookinventory.data.InventoryContract.InventoryEntry;
 
 public class InventoryDbHelper extends SQLiteOpenHelper {
 
-    public static final String LOG_TAG = InventoryDbHelper.class.getSimpleName();
-
     private static final String DATABASE_NAME = "books.db";
 
     private static final int DATABASE_VERSION = 1;
@@ -21,12 +19,13 @@ public class InventoryDbHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         String SQL_CREATE_INVENTORY_TABLE = " CREATE TABLE " + InventoryEntry.TABLE_NAME + " ("
-                + InventoryEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+                + InventoryEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,  "
                 + InventoryEntry.COLUMN_PRODUCT_NAME + " TEXT NOT NULL, "
-                + InventoryEntry.COLUMN_PRODUCT_PRICE + " INTEGER NOT NULL, "
-                + InventoryEntry.COLUMN_PRODUCT_QUANTITY + " INTEGER NOT NULL, "
+                + InventoryEntry.COLUMN_PRODUCT_PRICE + " INTEGER NOT NULL DEFAULT 0,"
+                + InventoryEntry.COLUMN_PRODUCT_QUANTITY + " INTEGER NOT NULL DEFAULT 0, "
                 + InventoryEntry.COLUMN_PRODUCT_SUPPLIER + " TEXT NOT NULL, "
-                + InventoryEntry.COLUMN_PRODUCT_PHONE + " INTEGER NOT NULL);";
+                + InventoryEntry.COLUMN_PRODUCT_PHONE + " INTEGER NOT NULL, "
+                + InventoryEntry.COLUMN_PRODUCT_EMAIL + " TEXT NOT NULL  );";
 
         db.execSQL(SQL_CREATE_INVENTORY_TABLE);
     }

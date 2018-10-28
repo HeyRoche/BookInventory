@@ -86,5 +86,5 @@
     <string name="supplier_needed">Must include supplier!</string>
     <string name="price_needed">Price is necessary!</string>
     <string name="quantity_needed">Quantity can\t be 0!</string>
-    <string name="order_contact_needed">Order contact info can be added at time of purchase.</string>
+    <string name="order_contact_needed">Contact info needed, contact information can be updated at time of purchase.</string>
 </resources>

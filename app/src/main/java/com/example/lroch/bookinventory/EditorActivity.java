@@ -184,18 +184,23 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
             //Validate the following information has been provided
             if(titleString.isEmpty()){
                 Toast.makeText(this, R.string.title_needed, Toast.LENGTH_SHORT).show();
+                return;
             }
             if(supplierString.isEmpty()){
                 Toast.makeText(this,R.string.supplier_needed,LENGTH_SHORT).show();
+                return;
             }
             if(priceString.isEmpty()){
                 Toast.makeText(this,R.string.price_needed,LENGTH_SHORT).show();
+                return;
             }
             if(quantityString.isEmpty()){
                 Toast.makeText(this,R.string.quantity_needed,LENGTH_SHORT).show();
+                return;
             }
             if(phoneString.isEmpty() || emailString.isEmpty()){
                 Toast.makeText(this,R.string.order_contact_needed,Toast.LENGTH_LONG).show();
+                return;
             }
 
         int price = 0;

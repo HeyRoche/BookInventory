@@ -198,7 +198,8 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
                 Toast.makeText(this,R.string.quantity_needed,LENGTH_SHORT).show();
                 return;
             }
-            if(phoneString.isEmpty() || emailString.isEmpty()){
+            //Change to or statement, allowing user to not include one field.
+            if(phoneString.isEmpty() && emailString.isEmpty()){
                 Toast.makeText(this,R.string.order_contact_needed,Toast.LENGTH_LONG).show();
                 return;
             }

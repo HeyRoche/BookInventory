@@ -21,6 +21,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.lroch.bookinventory.data.InventoryContract.InventoryEntry;
 
@@ -171,14 +172,32 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
         String phoneString = mPhoneEditText.getText().toString().trim();
         String emailString = mEmailEditText.getText().toString().trim();
 
+
         if (mCurrentBookUri == null &&
                 TextUtils.isEmpty(titleString) && TextUtils.isEmpty(supplierString) &&
                 TextUtils.isEmpty(priceString) && TextUtils.isEmpty(quantityString) &&
                 TextUtils.isEmpty(phoneString) && TextUtils.isEmpty(emailString)) {
             // Since no fields were modified, we can return early without creating a new book.
             // No need to create ContentValues and no need to do any ContentProvider operations.
-            return;
-        }
+            return;}
+
+            //Validate the following information has been provided
+            if(titleString.isEmpty()){
+                Toast.makeText(this, R.string.title_needed, Toast.LENGTH_SHORT).show();
+            }
+            if(supplierString.isEmpty()){
+                Toast.makeText(this,R.string.supplier_needed,LENGTH_SHORT).show();
+            }
+            if(priceString.isEmpty()){
+                Toast.makeText(this,R.string.price_needed,LENGTH_SHORT).show();
+            }
+            if(quantityString.isEmpty()){
+                Toast.makeText(this,R.string.quantity_needed,LENGTH_SHORT).show();
+            }
+            if(phoneString.isEmpty() || emailString.isEmpty()){
+                Toast.makeText(this,R.string.order_contact_needed,Toast.LENGTH_LONG).show();
+            }
+
         int price = 0;
         if (!TextUtils.isEmpty(priceString)) {
             price = Integer.parseInt(priceString);

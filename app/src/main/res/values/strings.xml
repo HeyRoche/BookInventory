@@ -82,5 +82,9 @@
     <string name="purchase">Purchase Book </string>
     <string name="insert_dummy">Insert Dummy Data</string>
     <string name="delete_all">Delete All Books</string>
-
+    <string name="title_needed">Must have title!</string>
+    <string name="supplier_needed">Must include supplier!</string>
+    <string name="price_needed">Price is necessary!</string>
+    <string name="quantity_needed">Quantity can\t be 0!</string>
+    <string name="order_contact_needed">Order contact info can be added at time of purchase.</string>
 </resources>
